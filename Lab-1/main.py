@@ -1,3 +1,6 @@
+import re
+
+
 # write a program that prints hello world
 def hello():
     print("Hello, World!")
@@ -45,10 +48,14 @@ print(fizzBuzz(15))
 # -------------------------------------------------------------------------
 # Ask the user to enter the radius of a circle print its calculated area and circumference
 def getCircleRadius():
-    radius = float(input("Enter the radius of the circle: "))
-    area = 3.14 * radius**2
-    circumference = 2 * 3.14 * radius
-    return f"Area: {area}, Circumference: {circumference}"
+    radius = input("Enter the radius of the circle: ")
+    if isinstance(radius, float) or isinstance(radius, int):
+        radius = float(radius)
+        area = 3.14 * radius**2
+        circumference = 2 * 3.14 * radius
+        return f"Area: {area}, Circumference: {circumference}"
+    else:
+        return "Invalid Radius"
 
 
 circle = getCircleRadius()
@@ -63,11 +70,16 @@ def getUserInfo():
         return "Invalid name. Please enter a valid name."
 
     email = input("Enter your email: ")
-    for c in list(email):
-        if c == "@":
-            break
-    else:
+    # Advanced E-Mail Validation:
+    if not re.match(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", email):
         return "Invalid Email"
+
+    # Basic E-Mail Validation:
+    # for c in list(email):
+    #     if c == "@":
+    #         break
+    # else:
+    #     return "Invalid Email"
 
     return f"Name: {name}, Email: {email}"
 
