@@ -1,0 +1,10 @@
+User login: john.doe@example.com
+Invalid attempt: notanemail@@example..com
+Contact: alice_123@gmail.com
+Test entry: hello world
+Support: support@my-site.org
+Another bad: user#mail.com
+Admin: admin@company.co
+Message: just_a_string
+Signup: new.user@domain.net
+Fake: email@invalid,com

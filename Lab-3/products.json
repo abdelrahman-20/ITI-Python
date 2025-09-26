@@ -1,0 +1,5 @@
+[
+  { "product": "usb", "price": 100.0, "discountedF": 90.0 },
+  { "product": "mouse", "price": 250.0, "discountedF": 225.0 },
+  { "product": "keyboard", "price": 499.5, "discountedF": 449.55 }
+]
